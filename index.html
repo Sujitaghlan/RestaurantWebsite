@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="nav-home-wrapper">
+
+            <header>
+                <nav>
+                    <div class="logo">
+                        <i class="fa-solid fa-utensils" style="color: var(--main-color);"></i>
+                        <span>Restoran</span>
+                    </div>
+                    <div class="nav-link">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#menu">Menu</a>
+                        <div id="pages">
+                            <a href="#pages">Pages <i class="fa-solid fa-circle-chevron-down"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="#booking">Booking</a></li>
+                                <li><a href="#our-team">Our Team</a></li>
+                                <li><a href="#testimonial">Testimonial</a></li>
+                            </ul>
+                        </div>
+                        <a href="#contact">Contact</a>
+                        <a href="#book_table" class="book-table">Book A Table</a>
+                    </div>
+                </nav>
+            </header>
+                <div class="overlay">
+                <section class="home">
+             
+                    <div class="left-content">
+                        <h1>Enjoy Our Delicious Meat</h1>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <a href="#book_table" class="book_table">BOOK A TABLE</a>
+                    </div>
+                    <div class="right-content">
+                        <img src="./images/bbq-grill.png" alt="barbeque-image">
+                    </div>
+                </div>
+                </section>
+
+
+    </section>
+
+    <main>
+        <section class="our-services">
+            <div class="service">
+                <i class="fa-solid fa-user fa-2xl" style="color: #ea6f0b;"></i>
+                <h3>Master Chefs</h3>
+                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-utensils fa-2xl" style="color: #ea6f0b;"></i>
+                <h3>Quality Food</h3>
+                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-cart-plus fa-2xl" style="color: #ea6f0b;"></i>
+                <h3>Online Order</h3>
+                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-headset fa-2xl" style="color: #ea6f0b;"></i>
+                <h3>24/7 Service</h3>
+                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            </div>
+        </section>
+                <!-- About Section -->
+        <section class="about-us">
+            <div class="about-us-left">
+                <img src="./images/img-1.jpeg" id="img1" alt="">   
+                <img src="./images/img-2.jpeg" id="img2" alt="">  
+                <img src="./images/img-3.jpeg" id="img3" alt="">  
+                <img src="./images/img-4.jpeg" id="img4" alt="">     
+            </div>
+            <div class="about-us-right">
+                <div>
+                    <span id="about-us-heading">about-us</span>
+                </div>
+                <h2>Welcome to <i class="fa-solid fa-utensils" style="color: var(--main-color);"></i> Restoran</h2>
+                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
+                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <div class="about-info">
+                    <div class="experience">
+                        <span id="experienceCounter">0</span>
+                        <div>
+                            <p>Years of</p>
+                            <h3>EXPERIENCE</h3>
+                        </div>
+                        
+                    </div>
+
+                    <div class="chefs">
+                        <span id="experienceCounter">0</span>
+                        <div>
+                            <p>Popular</p>
+                            <h3>MASTER CHEFS</h3>
+                        </div>
+                       
+                    </div>
+                   
+                    
+                </div>
+                <a href="">READ MORE</a>
+            </div>
+        </section>
+
+            <!-- Food Menu -->
+        <section id="menu-list">
+            <div id="food-menu">
+                Food Menu
+            </div>
+            <h2>Most Popular Items</h2>
+            <div class="select-meal">
+                <div class="meal-item breakfast-item">
+                    <i class="fa-solid fa-mug-saucer fa-2xl" style="color: var(--main-color);"></i>
+                    <div>
+                        <p>Popular</p>
+                        <h4 class="meal">Breakfast</h4>
+                        
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="meal-item lunch-item">
+                    <i class="fa-solid fa-burger fa-2xl" style="color: var(--main-color);"></i>
+                    <div>
+                        <p>Popular</p>
+                        <h4 class="meal">Lunch</h4>
+                        
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="meal-item dinner-item">
+                    <i class="fa-solid fa-utensils fa-2xl" style="color: var(--main-color);"></i>
+                    <div>
+                        <p>Popular</p>
+                        <h4 class="meal">Dinner</h4>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                
+            </div>
+            <hr class="select-meal-hr">
+
+            <div class="breakfast">
+                <div class="left-menu">
+                    <div class="food-list">
+                        <img src="https://cdn.standardmedia.co.ke/images/wysiwyg/images/qeXxypKKemo1pADSc5OPKA6FJ6Wa9So3c3S3CvIO.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 1</h5>
+                                <span>$115</span>
+                            </div>
+                          
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://images.services.kitchenstories.io/R9CvpB25mR7zRBillZ_yuRTl1tg=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2798-photo-final-1.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 2</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1X-hViNSblT-vxDNYjXem2UZUk2d7wKkVw&s" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 3</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/blscvmeh/ddc2e761-1f8e-4588-8204-bca34495dc24.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 4</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-menu">
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnVK5An9C9QDvb5IG90S69njaypCAE3kPPPCeAKA1jJKk90SEl7HUpnd7EKPlZXqgofME&usqp=CAU" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 5</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzbOhob2dpl4DbiV7jT6u70GHf7XKcAGWFaKdVDpB1s-hLQEbuWyUgiGyf4NuIcXVEhk&usqp=CAU" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 6</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGJ3kb4uuV24PuYwMiB9r7W7LnRueJr3hxgQ&s" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 7</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://cdn.zeebiz.com/sites/default/files/2018/08/22/49878-indianbreakfast-pixabay.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 8</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lunch hide">
+                <div class="left-menu">
+                    <div class="food-list">
+                        <img src="https://cdn.standardmedia.co.ke/images/wysiwyg/images/qeXxypKKemo1pADSc5OPKA6FJ6Wa9So3c3S3CvIO.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 9</h5>
+                                <span>$115</span>
+                            </div>
+                          
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://images.services.kitchenstories.io/R9CvpB25mR7zRBillZ_yuRTl1tg=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2798-photo-final-1.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 2</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1X-hViNSblT-vxDNYjXem2UZUk2d7wKkVw&s" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 3</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/blscvmeh/ddc2e761-1f8e-4588-8204-bca34495dc24.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 4</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-menu">
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnVK5An9C9QDvb5IG90S69njaypCAE3kPPPCeAKA1jJKk90SEl7HUpnd7EKPlZXqgofME&usqp=CAU" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 5</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzbOhob2dpl4DbiV7jT6u70GHf7XKcAGWFaKdVDpB1s-hLQEbuWyUgiGyf4NuIcXVEhk&usqp=CAU" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 6</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGJ3kb4uuV24PuYwMiB9r7W7LnRueJr3hxgQ&s" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 7</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://cdn.zeebiz.com/sites/default/files/2018/08/22/49878-indianbreakfast-pixabay.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 8</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dinner hide">
+                <div class="left-menu">
+                    <div class="food-list">
+                        <img src="https://cdn.standardmedia.co.ke/images/wysiwyg/images/qeXxypKKemo1pADSc5OPKA6FJ6Wa9So3c3S3CvIO.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 10</h5>
+                                <span>$115</span>
+                            </div>
+                          
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://images.services.kitchenstories.io/R9CvpB25mR7zRBillZ_yuRTl1tg=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2798-photo-final-1.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 2</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1X-hViNSblT-vxDNYjXem2UZUk2d7wKkVw&s" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 3</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/blscvmeh/ddc2e761-1f8e-4588-8204-bca34495dc24.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 4</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-menu">
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnVK5An9C9QDvb5IG90S69njaypCAE3kPPPCeAKA1jJKk90SEl7HUpnd7EKPlZXqgofME&usqp=CAU" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 5</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzbOhob2dpl4DbiV7jT6u70GHf7XKcAGWFaKdVDpB1s-hLQEbuWyUgiGyf4NuIcXVEhk&usqp=CAU" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 6</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGJ3kb4uuV24PuYwMiB9r7W7LnRueJr3hxgQ&s" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 7</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="food-list">
+                        <img src="https://cdn.zeebiz.com/sites/default/files/2018/08/22/49878-indianbreakfast-pixabay.jpg" alt="">
+                        <div class="food-description">
+                            <div class="food-price">
+                                <h5>Dish 8</h5>
+                                <span>$115</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="book-online">
+            <div class="left-video-col">
+               <img src="https://www.floridatoday.com/gcdn/presto/2019/02/21/PBRE/775a1d12-edcf-4d48-b340-b2ac4bb32424-WhereToSitSmaller.jpg?width=630&height=525&fit=crop&format=pjpg&auto=webp" alt="">
+              <i class="fa-sharp fa-solid fa-play fa-2xl ripple" id="videoLink"></i>
+               
+            </div>
+            <div id="video-container" class="hide">
+                <i class="fa-solid fa-xmark" id="close"></i>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/H3R1y1ADCZw?si=XoL0fSPWgWwzzf30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="youtube-video"></iframe>
+               </div>
+            <div class="right-form-col">
+                <form action="">
+                    <div class="reservation">
+                        <div>Reservation</div>
+                        <div class="reservation-line"></div>
+                    </div>
+                    <h2>Book A Table Online</h2>
+                    <div class="form-contents">
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your email">
+                        <input type="date" placeholder="Date and Time">
+                        <select name="no_of_people" id="no.of people" >
+                            <option value="" disabled selected>Select no. of People</option>
+                            <option value="">People 1</option>
+                            <option value="">People 2</option>
+                            <option value="">People 3</option>
+                        </select>
+                        <textarea name="special_request"  rows="8" placeholder="Special Request"></textarea>
+                        <button>Book Now</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
