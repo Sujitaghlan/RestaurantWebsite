@@ -2,6 +2,7 @@
 @import 'mixins/ripples-mixins';
 
 
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -12,27 +13,38 @@
     --main-color: #ff9028;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    max-width: 100%;
+
 }
+
 
 main{
     display: flex;
     flex-direction: column;
     gap: 50px;
+    
+
 }
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
-    position: fixed;
+    position: relative;
+    top: 0;
     width: 100%;
     z-index: 1;
     background-color: #000000;
+    min-width: 500px;
 }
 
 nav .logo{
@@ -52,6 +64,7 @@ nav .logo span{
     display: flex;
     gap: 20px;
     align-items: center;
+    transition: all 0.5s;
 }
 
 .nav-link a{
@@ -109,6 +122,10 @@ ul.dropdown li a:hover{
     color: #ffffff;
 }
 
+.hamburger-icon{
+    display: none;
+}
+
 .book-table{
     padding: 9px;
     background-color: var(--main-color);
@@ -130,18 +147,23 @@ ul.dropdown li a:hover{
     opacity: 0.85;
     width: 100%;
     height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 /* Home styling */
 .home{
+    width: 100%;
+    height: fit-content;
     display: flex;
     color: #ffffff;
     padding-top: 90px;
 }
 
 .left-content{
-    margin: 150px 50px 0;
+    margin: 120px 50px 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -175,7 +197,7 @@ ul.dropdown li a:hover{
 .right-content{
     width: 50%;
     margin-top: 18px;
-    margin-left: -80px;
+    margin-left: -30px;
 }
 .right-content img {
     animation: home_image 30s infinite linear;
@@ -210,6 +232,7 @@ ul.dropdown li a:hover{
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .service h3{
@@ -232,7 +255,6 @@ ul.dropdown li a:hover{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-
 }
 
 #img1{
@@ -325,6 +347,7 @@ ul.dropdown li a:hover{
 
 /* Food menu CSS */
 #food-menu{
+    min-width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,6 +409,7 @@ ul.dropdown li a:hover{
 
 .breakfast, .lunch, .dinner{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 80px;
@@ -431,6 +455,8 @@ ul.dropdown li a:hover{
 .book-online{
     display: flex;
     position: relative;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .hide{
@@ -438,7 +464,7 @@ ul.dropdown li a:hover{
 }
 
 .left-video-col{
-    position: relative;   
+    position: relative; 
 }
 
 
@@ -480,6 +506,7 @@ ul.dropdown li a:hover{
     width: 600px;
     height: 600px;
     background-color: #000000;
+    
 }
 
 #youtube-video{
@@ -487,6 +514,9 @@ ul.dropdown li a:hover{
     top: 15%;
     right: 25%;
     left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #close{
@@ -501,11 +531,12 @@ ul.dropdown li a:hover{
 
 .right-form-col{
     background-color: #070221;
-    width: 100%;
 }
 
+
 form{
-    padding: 25px 50px 0 50px;
+    padding: 25px 50px 48px;
+
 }
 
 form h2{
@@ -553,3 +584,456 @@ form button{
     border: none;
     border-radius: 5px;
 }
+
+.team-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-heading h5{
+    font-family: "Dancing Script", cursive;
+    font-size: 25px;
+    color: var(--main-color);
+}
+.team-line{
+    width: 40px;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.team-members h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.team-members-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.team-member{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+
+
+.team-member img{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.social-media-icon{
+    background-color: var(--main-color);
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.team-member:hover .team-member img{
+    transform: scale(1.2);
+}
+.team-member:hover  .social-media{
+    display: block;
+}
+
+.testimonials-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimonials-heading{
+    color: var(--main-color);
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+}
+.testimonials-line{
+    height: 2px;
+    width: 50px;
+    background-color: var(--main-color);
+}
+
+.testimonials h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.swiper{
+    z-index: 0;
+}
+.slider-wrapper{
+    /* overflow: hidden; */
+    max-width: 100vw;
+    margin: 0 70px 10px 0; /* Adjust margins as needed */
+    
+}
+
+.client-wrapper{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 40px;
+  
+}
+
+.clients{
+    border: 1px solid #dbd7d7;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.client-profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+}
+
+.clients i{
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+.client-profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.swiper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative; /* Ensure pagination is positioned correctly */
+    padding: 20px; /* Add padding around the Swiper container */
+    box-sizing: border-box; /* Include padding in the container's total width/height */
+}
+
+.swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--main-color);
+    border: none;
+}
+
+
+
+.middle-slide {
+    background-color: var(--main-color); /* Change this to your desired color */
+    color: #ffffff;
+}
+
+.middle-slide i {
+    color: #ffffff; /* Color for the icon in the middle slide */
+}
+
+
+footer{
+    padding: 50px;
+    background-color: #0c0324;
+    min-width: 500px;
+}
+.site-maps{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    border-bottom: 1px solid #484848;
+    padding-bottom: 50px;
+}
+
+.site-maps a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.company{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-heading{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--main-color);
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+}
+
+
+.footer-line{
+    width: 50px;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.contact, .contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.address, .contact-no, .e-mail{
+    color: #ffffff;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info .social-media i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0c0324;
+    border: 1px solid #ffffff;
+    text-align: center;
+    
+
+}
+
+.opening, .opening-time{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+.submit-email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-color);
+    background-color: #ffffff;
+    padding: 0;
+}
+.submit-email input{
+    border: none;
+    outline: none;
+}
+.submit-email button{
+    background-color: var(--main-color);
+    padding: 15px;
+    border: none;
+}
+
+.newsletter, .newsletter-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+@media screen and (max-width: 1010px){
+   
+    .nav-link{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .hamburger-icon{
+        display: block;
+    }
+
+    .nav-link a {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .our-services{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #youtube-video{
+        width: 400px;
+    }
+    
+    .site-maps{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and (max-width:1230px) {
+
+    .home{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        align-items: center;
+    }
+
+    .left-content{
+        width: 100vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px 0 0 0;
+    }
+
+    .right-content{
+        width: 100vw;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-content p{
+        padding: 20px;
+    }
+
+    .right-content img{
+        width: 450px;
+        height: 450px;
+
+    }
+
+    .about-us{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .about-us-right{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .our-services{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .right-content img{
+        width: 350px;
+        height: 350px;
+
+    }
+   
+}
+
+@media screen and (max-width: 1170px){
+    .book-online{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-video-col{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-form-col{
+        max-width: 625px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen  and (max-width: 630px){
+ .right-content img{
+    width: 200px;
+    height: 200px;
+ }
+   #youtube-video{
+    width: 300px;
+}
+#img1{
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+#img2{
+    width: 100px;
+    height: 100px;
+    margin: 80px 20px 10px 0;
+    border-radius: 3px;
+}
+
+#img3{
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+    margin: 0 10px 40px 50px;
+
+}
+
+#img4{
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+}
+.about-us-right{
+    font-size: 10px;
+}
+
+
+.select-meal, .breakfast, .lunch, .dinner{
+    font-size: 13px;
+    padding: 20px;
+}
+
+input, select{
+    width: 100%;
+}
+
+}
+
+@media screen  and (max-width: 600px){
+    .site-maps{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen  and (max-width: 490px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+

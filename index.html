@@ -10,42 +10,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="nav-home-wrapper">
+    <div class="main-container">
+        <section class="nav-home-wrapper">
 
             <header>
                 <nav>
-                    <div class="logo">
-                        <i class="fa-solid fa-utensils" style="color: var(--main-color);"></i>
-                        <span>Restoran</span>
-                    </div>
+
+                        <div class="logo">
+                            <i class="fa-solid fa-utensils" style="color: var(--main-color);"></i>
+                            <span id="logo-item">Restoran</span>
+                        </div>
+
                     <div class="nav-link">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#menu">Menu</a>
+                        <a href="#home" class="link-to">Home</a>
+                        <a href="#about" class="link-to">About</a>
+                        <a href="#services" class="link-to">Services</a>
+                        <a href="#menu-list" class="link-to">Menu</a>
                         <div id="pages">
-                            <a href="#pages">Pages <i class="fa-solid fa-circle-chevron-down"></i></a>
+                            <a href="#pages" class="link-to">Pages <i class="fa-solid fa-circle-chevron-down link-to"></i></a>
                             <ul class="dropdown">
-                                <li><a href="#booking">Booking</a></li>
-                                <li><a href="#our-team">Our Team</a></li>
-                                <li><a href="#testimonial">Testimonial</a></li>
+                                <li><a href="#booking" class="link-to">Booking</a></li>
+                                <li><a href="#our-team" class="link-to">Our Team</a></li>
+                                <li><a href="#testimonial" class="link-to">Testimonial</a></li>
                             </ul>
                         </div>
-                        <a href="#contact">Contact</a>
-                        <a href="#book_table" class="book-table">Book A Table</a>
+                        <a href="#contact" class="link-to">Contact</a>
+                        <a href="#booking" class="book-table link-to">Book A Table</a>
+                    </div>
+                    <div class = "hamburger-icon">
+                        <i class ="fa-solid fa-bars" style="color: var(--main-color);"></i>
                     </div>
                 </nav>
             </header>
                 <div class="overlay">
-                <section class="home">
+                <section class="home" id="home">
              
                     <div class="left-content">
                         <h1>Enjoy Our Delicious Meat</h1>
                         <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <a href="#book_table" class="book_table">BOOK A TABLE</a>
+                        <a href="#booking" class="book_table">BOOK A TABLE</a>
                     </div>
                     <div class="right-content">
                         <img src="./images/bbq-grill.png" alt="barbeque-image">
@@ -54,10 +61,12 @@
                 </section>
 
 
-    </section>
 
+
+    </div>
+    
     <main>
-        <section class="our-services">
+        <section class="our-services" id="services">
             <div class="service">
                 <i class="fa-solid fa-user fa-2xl" style="color: #ea6f0b;"></i>
                 <h3>Master Chefs</h3>
@@ -80,7 +89,7 @@
             </div>
         </section>
                 <!-- About Section -->
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="about-us-left">
                 <img src="./images/img-1.jpeg" id="img1" alt="">   
                 <img src="./images/img-2.jpeg" id="img2" alt="">  
@@ -423,32 +432,32 @@
 
         </section>
 
-        <section class="book-online">
+        <section class="book-online" id="booking">
             <div class="left-video-col">
-               <img src="https://www.floridatoday.com/gcdn/presto/2019/02/21/PBRE/775a1d12-edcf-4d48-b340-b2ac4bb32424-WhereToSitSmaller.jpg?width=630&height=525&fit=crop&format=pjpg&auto=webp" alt="">
+               <img src="https://www.floridatoday.com/gcdn/presto/2019/02/21/PBRE/775a1d12-edcf-4d48-b340-b2ac4bb32424-WhereToSitSmaller.jpg?width=625&height=528&fit=crop&format=pjpg&auto=webp" alt="">
               <i class="fa-sharp fa-solid fa-play fa-2xl ripple" id="videoLink"></i>
                
             </div>
             <div id="video-container" class="hide">
                 <i class="fa-solid fa-xmark" id="close"></i>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/H3R1y1ADCZw?si=XoL0fSPWgWwzzf30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="youtube-video"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/H3R1y1ADCZw?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="youtube-video"></iframe>
                </div>
             <div class="right-form-col">
-                <form action="">
+                <form onsubmit="handleSubmit(event)" id="myForm">
                     <div class="reservation">
                         <div>Reservation</div>
                         <div class="reservation-line"></div>
                     </div>
                     <h2>Book A Table Online</h2>
                     <div class="form-contents">
-                        <input type="text" placeholder="Your Name">
-                        <input type="email" placeholder="Your email">
-                        <input type="date" placeholder="Date and Time">
-                        <select name="no_of_people" id="no.of people" >
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="date" placeholder="Date and Time" required>
+                        <select name="no_of_people" id="no.of people" required>
                             <option value="" disabled selected>Select no. of People</option>
-                            <option value="">People 1</option>
-                            <option value="">People 2</option>
-                            <option value="">People 3</option>
+                            <option value="1">People 1</option>
+                            <option value="2">People 2</option>
+                            <option value="3">People 3</option>
                         </select>
                         <textarea name="special_request"  rows="8" placeholder="Special Request"></textarea>
                         <button>Book Now</button>
@@ -457,12 +466,220 @@
                 </form>
             </div>
         </section>
+        
+        <section>
+            <div class="team-members" id="our-team">
+                <div class="team-heading">
+                    <div class="team-line"></div>
+                    <h5>Team Members</h5>
+                    <div class="team-line"></div>
+                </div>
+                <h2>Our Master Chefs</h2>
+            </div>
+            <div class="team-members-container">
+                <section class="team-member">
+                    <img src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg" alt="">
+                    <h5>Full Name</h5>
+                    <p>Designation</p>
+                    <div class="social-media hide">
+                        <i class="fa-brands fa-facebook-f social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-twitter social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-instagram social-media-icon" style="color: #fafafa;"></i>
+                    </div>
+                </section>
+                <section class="team-member">
+                    <img src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg" alt="">
+                    <h5>Full Name</h5>
+                    <p>Designation</p>
+                    <div class="social-media hide">
+                        <i class="fa-brands fa-facebook-f social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-twitter social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-instagram social-media-icon" style="color: #fafafa;"></i>
+                    </div>
+                </section>
+                <section class="team-member">
+                    <img src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg" alt="">
+                    <h5>Full Name</h5>
+                    <p>Designation</p>
+                    <div class="social-media hide">
+                        <i class="fa-brands fa-facebook-f social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-twitter social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-instagram social-media-icon" style="color: #fafafa;"></i>
+                    </div>
+                </section>
+                <section class="team-member">
+                    <img src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg" alt="">
+                    <h5>Full Name</h5>
+                    <p>Designation</p>
+                    <div class="social-media hide">
+                        <i class="fa-brands fa-facebook-f social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-twitter social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-instagram social-media-icon" style="color: #fafafa;"></i>
+                    </div>
+                </section>
+            </div>
+            
+        </section>
+
+        <section class="testimonials" id="testimonial">
+            <div class="testimonials-heading">
+                <div class="testimonials-line"></div>
+                <h3>Testimonials</h3>
+                <div class="testimonials-line"></div>
+            </div>
+            <h2>Our Client Says !!!</h2>
+            <div class="swiper mySwiper">
+                <div class="slider-wrapper">
+                    <div class="client-wrapper swiper-wrapper">
+                        <div class="clients swiper-slide">
+                            <i class="fa-solid fa-quote-left fa-2xl"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet.</p>
+                            <div class="client-profile">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyXmB3P-OC9RoXg06XXPdZU4ex0tyE4moJA&s" alt="">
+                                <div class="profile">
+                                    <h3>Client Name</h3>
+                                    <p>Profession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clients swiper-slide">
+                            <i class="fa-solid fa-quote-left fa-2xl"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>
+                            <div class="client-profile">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyXmB3P-OC9RoXg06XXPdZU4ex0tyE4moJA&s" alt="">
+                                <div class="profile">
+                                    <h3>Client Name</h3>
+                                    <p>Profession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clients swiper-slide">
+                            <i class="fa-solid fa-quote-left fa-2xl"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>
+                            <div class="client-profile">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyXmB3P-OC9RoXg06XXPdZU4ex0tyE4moJA&s" alt="">
+                                <div class="profile">
+                                    <h3>Client Name</h3>
+                                    <p>Profession</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clients swiper-slide">
+                            <i class="fa-solid fa-quote-left fa-2xl"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>
+                            <div class="client-profile">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyXmB3P-OC9RoXg06XXPdZU4ex0tyE4moJA&s" alt="">
+                                <div class="profile">
+                                    <h3>Client Name</h3>
+                                    <p>Profession</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+               
+            </div>
+           
+        </section>
 
     </main>
     
     <footer>
-
+        <div class="site-maps">
+            <div class="company">
+                <div class="footer-heading">
+                    <h4>Company</h4>
+                    <div class="footer-line"></div>
+                </div>
+                <div class="company-links">
+                    <i class="fa-solid fa-greater-than fa-2xs" style="color: #ffffff;"></i>
+                    <a href="">About Us</a>
+                </div>
+                <div class="company-links">
+                    <i class="fa-solid fa-greater-than fa-2xs" style="color: #ffffff;"></i>
+                    <a href="">Contact Us</a>
+                </div>
+                <div class="company-links">
+                    <i class="fa-solid fa-greater-than fa-2xs" style="color: #ffffff;"></i>
+                    <a href="">Reservation</a>
+                </div>
+                <div class="company-links">
+                    <i class="fa-solid fa-greater-than fa-2xs" style="color: #ffffff;"></i>
+                    <a href="">Privacy Policy</a>
+                </div>
+                <div class="company-links">
+                    <i class="fa-solid fa-greater-than fa-2xs" style="color: #ffffff;"></i>
+                    <a href="">Terms & Condition</a>
+                </div>
+              
+            </div>
+            <div class="contact">
+                <div class="footer-heading">
+                    <h4>Contact</h4>
+                    <div class="footer-line"></div>
+                </div>
+                <div class="contact-info">
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+                        <span>123 Street, New York, USA</span>
+                    </div>
+                    <div class="contact-no">
+                        <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                        <span>+012 345 67890</span>
+                    </div>
+                    <div class="e-mail">
+                        <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                        <span>info@example.com</span>
+                    </div>
+                    <div class="social-media">
+                        <i class="fa-brands fa-facebook-f social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-twitter social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-instagram social-media-icon" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-youtube social-media-icon" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="opening">
+                <div class="footer-heading">
+                    <h4>Opening</h4>
+                    <div class="footer-line"></div>
+                </div>
+                    <div class="opening-time">
+                        <div>
+                            <div>Monday-Saturday</div>
+                            <div>09AM-09PM</div>
+                        </div>
+                        <div>
+                            <div>Sunday</div>
+                            <div>10AM-08PM</div>
+                        </div>
+                    </div>
+                        
+                    
+                
+            </div>
+            <div class="newsletter">
+                <div class="footer-heading">
+                    <h4>Newsletter</h4>
+                    <div class="footer-line"></div>
+                </div>
+                <div class="newsletter-info">
+                    <div>Dolor amet sit justo amet elitr clita ipsum elitr est.</div>
+                    <div class="submit-email">
+                        <input type="email" placeholder="Your email">
+                        <button>SIGN UP</button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
 </body>
 </html>
